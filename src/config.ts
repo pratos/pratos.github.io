@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Pratos",
   profile: "https://pratos.github.io",
   desc: "pratos blog",
-  // title: "",
+  title: "pratos blog",
   // ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
