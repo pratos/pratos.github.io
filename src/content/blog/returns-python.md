@@ -4,9 +4,9 @@ pubDatetime: 2023-01-30T15:57:52.737Z
 title: returns and fun(k)c in Python
 slug: returns-python
 featured: false
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
 tags:
-  - release
+  - python
+  - functional-programming
 description: This is a personal experience of using returns and trying to learn functional programming paradigms in Python (in a professional setting).
 ---
 
@@ -14,6 +14,8 @@ description: This is a personal experience of using returns and trying to learn 
 Python doesn't let you write functional code out of the box. There's a good chance, the "functional" code you might write isn't functional. I'm definitely not here to discuss the intricacies of functional programming, just the experiences.
 
 We are aware of map, filter, functools, itertools and lots of other niceties, which proxies for leveraging nicer parts of functional programming APIs. These let you do the functional things. But I wanted to satisfy my itch for abstractions that would help me leverage functional paradigms more accessibly (maybe?). This led me to returns.
+
+### Table of contents
 
 ### Did returns have returns?
 First impressions and Railway Oriented Programming Pattern
