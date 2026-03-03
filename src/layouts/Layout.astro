@@ -135,11 +135,28 @@ const structuredData = {
 
     <ViewTransitions />
     <Posthog />
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script is:inline>
-      document.addEventListener("astro:page-load", () => {
-        window.twttr?.widgets?.load?.();
-      });
+      const TWITTER_WIDGETS_ID = "twitter-wjs";
+
+      const loadTwitterWidgets = () => {
+        if (window.twttr?.widgets?.load) {
+          window.twttr.widgets.load();
+          return;
+        }
+
+        if (document.getElementById(TWITTER_WIDGETS_ID)) return;
+
+        const script = document.createElement("script");
+        script.id = TWITTER_WIDGETS_ID;
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        script.charset = "utf-8";
+        script.onload = () => window.twttr?.widgets?.load?.();
+        document.head.appendChild(script);
+      };
+
+      document.addEventListener("DOMContentLoaded", loadTwitterWidgets);
+      document.addEventListener("astro:page-load", loadTwitterWidgets);
     </script>
 
     <script is:inline src="/toggle-theme.js" async></script>
