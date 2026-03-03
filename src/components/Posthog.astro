@@ -8,4 +8,15 @@
     api_host: "https://us.i.posthog.com",
     defaults: "2026-01-30",
   });
+
+  const capturePageView = () => {
+    if (!window.posthog?.capture) return;
+    window.posthog.capture("page_view", {
+      path: window.location.pathname,
+      title: document.title,
+    });
+  };
+
+  capturePageView();
+  document.addEventListener("astro:page-load", capturePageView);
 </script>
