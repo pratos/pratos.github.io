@@ -64,31 +64,28 @@ There is a lot of friction in following your interests and sitting down to write
 	- I've access to my personal obsidian via the bot, so note-taking is easy. Formatting notes is easy!
 - Since, `pi` is what powers everything, I've a fair idea on how the multi-turn conversations go. With the new [`acp agents`](https://docs.openclaw.ai/tools/acp-agents), Whis can directly control my `pi` sessions 👀 
 
-1. FPL Assistant
-This is the current state of my FPL team
-![pasted-image-20260303193035](@assets/images/blog/tryst-with-openclaw/pasted-image-20260303193035.png)
-With the new FPL assistant (Still WIP), I can actually think about it reminding me to change teams and give me enough context on how can teams be setup!
-- Demo:
-	
+1. **FPL Assistant**
+   This is the current state of my FPL team.
+   ![pasted-image-20260303193035](@assets/images/blog/tryst-with-openclaw/pasted-image-20260303193035.png)
+   With the new FPL assistant (Still WIP), I can actually think about it reminding me to change teams and give me enough context on how can teams be setup!
+   - Demo:
 
-2. Meme indexer 
-I'm an avid collector of memes from X. But I forget where I saved them and never had them handy. Wrote a `uv` one time execution script that doesn't need any stupid setup like the above. The skill automatically indexes the images via CLIP (for now). This was a quick setup, and still some tweaking needs to be done to get a nicer setup. But hey works! 
+2. **Meme indexer**
+   I'm an avid collector of memes from X. But I forget where I saved them and never had them handy. Wrote a `uv` one time execution script that doesn't need any stupid setup like the above. The skill automatically indexes the images via CLIP (for now). This was a quick setup, and still some tweaking needs to be done to get a nicer setup. But hey works!
+   ![pasted-image-20260303190031](@assets/images/blog/tryst-with-openclaw/pasted-image-20260303190031.png)
 
-![pasted-image-20260303190031](@assets/images/blog/tryst-with-openclaw/pasted-image-20260303190031.png)
+3. **Telegram bot as an editor**
+   Who would have thought, setting up obsidian and give access to it will unlock editor as a service?
 
-3. Telegram bot as an editor
-Who would have thought, setting up obsidian and give access to it will unlock editor as a service? 
+   Using `gpt-5.2`, Whis managed to add relevant images. Any new note, is added with relevant context with the Editor skill. Helped with the structure, superflous language and other grammatical mistakes.
+   ![pasted-image-20260303190142](@assets/images/blog/tryst-with-openclaw/pasted-image-20260303190142.png)
 
-Using `gpt-5.2` , Whis managed to add relevant images. Any new note, is added with relevant context with the Editor skill. Helped with the structure, superflous language and other grammatical mistakes.
+4. **Daily FOMO resolver (Refactor)**
+   The GrowthX buildathon hosts had asked me a question, what's the `v2` for it (lol @ me). But after I (re)build the `v1`, it basically was to monitor: `X`, `WhatsApp Groups` and `Discord Channels` that have a lot of chatter during the day (no time to read through everything) + night time (US/Europe folks chatter).
+   At least, hope that I find out a solution to surface quality conversations for myself.
 
-![pasted-image-20260303190142](@assets/images/blog/tryst-with-openclaw/pasted-image-20260303190142.png)
-
-4. Daily FOMO resolver (Refactor)
-The GrowthX buildathon hosts had asked me a question, what's the `v2` for it (lol @ me). But after I (re)build the `v1`, it basically was to monitor: `X`, `WhatsApp Groups` and `Discord Channels` that have a lot of chatter during the day (no time to read through everything) + night time (US/Europe folks chatter)
-At least, hope that I find out a solution to surface quality conversations for myself.
-
-5. Commonplace physical notebooks -> Obsidian
-I've 2+ years of extensive notes lying in my notebooks. I've not been able to digitize them and index them in Obsidian. If the Meme indexer tooling is improved, I can definitely do this faster.
+5. **Commonplace physical notebooks -> Obsidian**
+   I've 2+ years of extensive notes lying in my notebooks. I've not been able to digitize them and index them in Obsidian. If the Meme indexer tooling is improved, I can definitely do this faster.
 
 ## Takeaways
 Once the initial hurdle is over, there's still a lot more can be done that I've not thought of! And there's a lot of people doing cool stuff with Openclaw online. I'm still skeptical on whether Openclaw is a good solution for day to day tasks that require rigorous auditing. But there are patterns that can be applied to how we build the next set of `agentic juiced software v3`. 
