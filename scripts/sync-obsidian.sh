@@ -74,6 +74,8 @@ for md in "$OBSIDIAN_DIR"/*.md; do
   fi
 
   tmp_body=$(mktemp)
+  in_numbered_list=0
+  list_indent=""
 
   while IFS= read -r line; do
     if [[ "$line" =~ ^([[:space:]]*)!\[\[(.+)\]\] ]]; then
@@ -92,6 +94,19 @@ for md in "$OBSIDIAN_DIR"/*.md; do
       url="${BASH_REMATCH[1]}"
       line="<blockquote class=\"twitter-tweet\"><a href=\"${url}\"></a></blockquote>"
     fi
+
+    if [[ "$line" =~ ^([[:space:]]*)([0-9]+)\.[[:space:]]+ ]]; then
+      in_numbered_list=1
+      list_indent="${BASH_REMATCH[1]}   "
+    elif [[ "$line" =~ ^[[:space:]]*#{1,6}[[:space:]]+ ]]; then
+      in_numbered_list=0
+    elif [[ $in_numbered_list -eq 1 ]]; then
+      if [[ -n "${line//[[:space:]]/}" ]]; then
+        trimmed="${line#"${line%%[![:space:]]*}"}"
+        line="${list_indent}${trimmed}"
+      fi
+    fi
+
     printf '%s\n' "$line" >> "$tmp_body"
   done < "$md"
 
