@@ -4,7 +4,7 @@ pubDatetime: 2026-03-03T14:24:00Z
 title: Tryst with Openclaw
 slug: tryst-with-openclaw
 featured: false
-draft: false
+draft: true
 tags:
   - openclaw
   - buildathon
